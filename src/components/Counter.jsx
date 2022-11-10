@@ -1,27 +1,28 @@
 import React from 'react'
-
-
+import { useSelector, useDispatch } from "react-redux";
 import * as actions from "../redux/action/CountActions"
 
-const Counter = ({store}) => {
+const Counter = () => {
+  const count = useSelector(state => state.counter);
+  
+  const dispatch = useDispatch();
 
-console.log(store.getState());
   const increaseCounter = () => {
-   store.dispatch(actions.increaseCount())
+    dispatch(actions.increaseCount())
   }
  
   const decreaseCounter = () => {
-    store.dispatch(actions.decreaseCount())
+    dispatch(actions.decreaseCount())
   }
   
   
 
     return (
     <div>
-      <h2>Counter :: {store.getState().counter}</h2>
+      <h2>Counter :: {count}</h2>
       
       <button style={{margin:10, padding:5, fontSize:20}} onClick={increaseCounter}>+</button>
-      <button style={{margin:10, padding:5,fontSize:20}} onClick={decreaseCounter}>-</button>
+      <button style={{margin:10, padding:5,fontSize:20}} onClick={decreaseCounter }>-</button>
     
     </div>
     

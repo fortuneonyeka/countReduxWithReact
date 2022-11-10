@@ -6,9 +6,9 @@ import EvenCounter from "./components/EvenCounter";
 function App({store}) {
   return (
     <div className="App">
-    <Counter store={store}/>
+    <Counter/>
     <hr/>
-    <EvenCounter store={store}/>
+    <EvenCounter />
     </div>
   );
 }
