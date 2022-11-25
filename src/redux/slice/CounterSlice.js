@@ -3,6 +3,7 @@ import { createSlice } from "@reduxjs/toolkit";
 const initialState = {
   count: 0,
   evenCount: 2,
+  addByAmount: 0
 };
 
 export const counterSlice = createSlice({
@@ -23,10 +24,17 @@ export const counterSlice = createSlice({
     evenDecrement: (state) => {
       state.evenCount -= 2;
     },
+    incrementByAmount: (state, action) => {
+      state.addByAmount  += action.payload
+    },
+
+    reset: (state) => {
+      state.addByAmount = 0
+    }
   },
 });
 
-export const { increment, decrement, evenIncrement, evenDecrement } =
+export const { increment, decrement, evenIncrement, evenDecrement,reset,incrementByAmount } =
   counterSlice.actions;
 
 export default counterSlice.reducer;
