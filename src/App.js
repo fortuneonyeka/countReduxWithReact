@@ -2,6 +2,7 @@
 import './App.css';
 import Counter from "./components/Counter";
 import EvenCounter from "./components/EvenCounter";
+import IncreaseByAmount from "./components/IncreaseByAmount";
 
 function App({store}) {
   return (
@@ -9,6 +10,8 @@ function App({store}) {
     <Counter/>
     <hr/>
     <EvenCounter />
+    <hr/>
+    <IncreaseByAmount/>
     </div>
   );
 }

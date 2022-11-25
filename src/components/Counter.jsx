@@ -20,14 +20,14 @@ const Counter = () => {
     <div>
       <h2>Counter :: {count}</h2>
 
-      <button
-        style={{ margin: 10, padding: 5, fontSize: 20 }}
+      <button className="btn"
+        
         onClick={increaseCounter}
       >
         +
       </button>
       <button
-        style={{ margin: 10, padding: 5, fontSize: 20 }}
+        className="btn"
         onClick={decreaseCounter}
       >
         -
